@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrunchCoCo – NETLE Enterprise</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .faq-section {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeSlideIn 1.5s ease;
+}
+
+.faq-section h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6b4e31;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #f57224;
+  padding: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question:hover {
+  color: #d35400;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 0 15px 15px;
+  font-size: 1em;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+    :root {
+      --main-color: #6b4e31;
+      --accent-color: #f57224;
+      --light-bg: rgba(255, 255, 255, 0.85);
+      --text-color: #333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+                  url('index_b.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    .team-btn {
+      background-color: var(--main-color);
+      padding: 12px 26px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .team-btn:hover {
+      background-color: #4e3825;
+    }
+
+    .buy-now {
+      display: inline-block;
+      background-color: var(--main-color);
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .buy-now:hover {
+      background-color: #4e3825;
+    }
+
+    header {
+      background-color: rgba(107, 78, 49, 0.85);
+      color: white;
+      padding: 60px 20px 40px;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+      background-color: var(--light-bg);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      color: var(--main-color);
+      text-align: center;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .poster img {
+      display: block;
+      max-width: 100%;
+      border-radius: 16px;
+      margin: 0 auto;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .cta, .team-list {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background-color: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: transform 0.3s, background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #d65d1e;
+      transform: scale(1.05);
+    }
+
+    .team-list ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1em;
+    }
+
+    .team-list li {
+      margin: 10px 0;
+    }
+
+    footer {
+      background-color: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .section h2 {
+        font-size: 1.5em;
+      }
+
+      .cta a {
+        padding: 12px 20px;
+        font-size: 0.95em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CrunchCoCo</h1>
+  <p>By NETLE Enterprise – Grab • Go • Glow</p>
+</header>
+
+<div class="container">
+  <div class="section product-showcase">
+    <h2>Explore Our Product Range</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="product1.jpg" alt="Original CrunchCoCo">
+        <h3>Original CrunchCoCo</h3>
+        <p>Classic blend of oats, nuts, and honey — our best seller!</p>
+      </div>
+      <div class="product-card">
+        <img src="product2.jpg" alt="Tropical Fruits">
+        <h3>Tropical Fruits</h3>
+        <p>With dried mango, pineapple, and coconut — a fruity delight.</p>
+      </div>
+      <div class="product-card">
+        <img src="product3.jpg" alt="Chocolate Crunch">
+        <h3>Chocolate Crunch</h3>
+        <p>Infused with dark chocolate bits for indulgent mornings.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section intro">
+    <h2>Product Introduction</h2>
+    <p>CrunchCoCo is a smart and sustainable breakfast product made for people with busy lifestyles. It comes wrapped in edible rice paper and contains a powerful blend of crunchy cereals, dried fruits, and nuts that nourish the body and delight the senses.</p>
+    <p>It's portable, eco-friendly, and delicious — perfect for students, professionals, or anyone on-the-go. Click below to learn more!</p>
+    <div class="cta">
+      <a href="product-details.html">Learn More</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Official Poster</h2>
+    <div class="poster">
+      <img src="crunchcoco-poster.jpg" alt="CrunchCoCo Poster">
+    </div>
+  </div>
+
+  <div class="cta">
+    <a href="our-team.html" class="team-btn">👥 Our Team</a>
+  </div>
+
+  <div class="section">
+    <h2>Watch Our Product Demo</h2>
+    <div class="cta">
+      <a href="https://youtu.be/9PSb3L1jbnE" target="_blank">▶️ Click to Watch Video</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Visit Our Instagram</h2>
+    <div class="cta">
+      <a href="https://www.instagram.com/netle.my_" target="_blank">@netle.my_ on Instagram</a>
+    </div>
+  </div>
+
+  <a class="buy-now" href="buy-now.html">Buy Now</a>
+</div>
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">🥣 Are CrunchCoCo products suitable for vegetarians?</button>
+    <div class="faq-answer">
+      <p>Yes, all our products are plant-based and suitable for vegetarians. We use high-quality grains, nuts, and fruit-based ingredients.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">⏱ How long can I store the products?</button>
+    <div class="faq-answer">
+      <p>Our breakfast products have a shelf life of up to 6 months if stored in a cool, dry place.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">🌱 What kind of packaging do you use?</button>
+    <div class="faq-answer">
+      <p>We use biodegradable and recyclable packaging materials to reduce environmental impact and support sustainability.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">📦 Where can I buy CrunchCoCo products?</button>
+    <div class="faq-answer">
+      <p>Currently, you can purchase our products through campus pop-up stores or order directly via Instagram @netle.my_.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 NETLE Enterprise. All rights reserved.
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+  
+</script>
+<script>
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(q => {
+    q.addEventListener('click', () => {
+      const answer = q.nextElementSibling;
+
+      // 关闭其他已展开的
+      document.querySelectorAll('.faq-answer').forEach(a => {
+        if (a !== answer) a.style.maxHeight = null;
+      });
+
+      // 切换当前点击项
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

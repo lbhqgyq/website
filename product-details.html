@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CrunchCoCo - Product Details</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: rgba(107, 78, 49, 0.8);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      animation: fadeInTop 1.2s ease-in-out;
+    }
+    header h1 {
+      font-size: 2.5em;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    h2 {
+      color: #6b4e31;
+      margin-top: 40px;
+      font-size: 1.6em;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: #f57224;
+      border-radius: 2px;
+      animation: slideIn 1s ease forwards;
+    }
+    p {
+      font-size: 1.1em;
+      text-align: justify;
+      margin-bottom: 20px;
+      animation: fadeUp 1s ease;
+    }
+    ul {
+      padding-left: 20px;
+      font-size: 1.05em;
+      animation: fadeUp 1.2s ease;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #f57224;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    a.button:hover {
+      background-color: #d65d1e;
+      transform: scale(1.05);
+    }
+    footer {
+      background-color: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      animation: fadeInBottom 1s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeInTop {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInBottom {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideIn {
+      from { width: 0; }
+      to { width: 60px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>CrunchCoCo - Product Details</h1>
+</header>
+
+<div class="container">
+  <h2>What is CrunchCoCo?</h2>
+  <p>CrunchCoCo is more than just a breakfast snack – it's a modern solution for healthy, fast, and eco-friendly eating. Developed by NETLE Enterprise, CrunchCoCo is designed for people who are constantly on the move but still prioritize their health and environmental impact.</p>
+  <p>Each CrunchCoCo bar contains a handcrafted blend of grains, nuts, and dried fruits, carefully selected to offer both nutritional value and rich flavor. The ingredients are bound together with natural honey and coconut oil, ensuring a wholesome experience with every bite. Wrapped in edible glutinous rice paper, CrunchCoCo is not only delicious but also sustainable — there's no packaging waste, making it ideal for eco-conscious consumers.</p>
+  <p>The snack is highly versatile: you can eat it dry as a crunchy bar, or soak it in warm milk like a traditional cereal. It’s perfect for students, busy professionals, travelers, and even kids. With CrunchCoCo, healthy eating becomes easy, enjoyable, and responsible.</p>
+
+  <h2>Key Ingredients</h2>
+  <ul>
+    <li>Rolled oats and whole grain cereals</li>
+    <li>Dried fruits such as cranberries, bananas, and raisins</li>
+    <li>Almonds, sunflower seeds, and chia</li>
+    <li>Glutinous rice paper (edible wrap)</li>
+    <li>Natural honey and coconut oil</li>
+  </ul>
+
+  <h2>Features and Benefits</h2>
+  <ul>
+    <li><strong>Zero-waste packaging:</strong> Everything is edible, even the wrap!</li>
+    <li><strong>Nutritious and energizing:</strong> Packed with fiber, healthy fats, and protein</li>
+    <li><strong>Convenient:</strong> No need for utensils or bowls</li>
+    <li><strong>Multi-style consumption:</strong> Eat dry for crunch or soak in milk for a cereal-style treat</li>
+    <li><strong>Perfect for all ages:</strong> Students, professionals, or kids</li>
+  </ul>
+
+  <h2>Our Mission</h2>
+  <p>We believe that a good meal shouldn't harm the planet. CrunchCoCo is our answer to sustainable snacking — it’s not just food, it’s a lifestyle. We are committed to environmental responsibility and health-conscious innovation.</p>
+
+  <div style="text-align:center;">
+    <a href="index.html" class="button">← Back to Home</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 NETLE Enterprise. Designed for a better future.
+</footer>
+
+</body>
+</html>
